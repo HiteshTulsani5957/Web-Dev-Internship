@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Navbar & Login</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MySite</div>
+        <button id="menuToggle" class="menu-toggle">☰</button>
+        <div id="navLinks" class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#" id="navLogin">Login</a>
+        </div>
+    </nav>
+
+    <main class="auth-shell">
+        <section class="form-panel" aria-live="polite">
+            <button id="closeAuth" class="secondary-btn" type="button" style="float:right">Close</button>
+            <div class="tab-row" role="tablist" aria-label="Authentication tabs">
+                <button class="tab-btn" role="tab" aria-selected="true" aria-controls="login-panel" id="login-tab">
+                    Sign in
+                </button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="register-panel"
+                    id="register-tab">
+                    Create account
+                </button>
+            </div>
+
+            <section class="panel active" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+                <h2>Welcome back</h2>
+                <p>Use your work email and password to access your dashboard.</p>
+
+                <form id="login-form" novalidate>
+                    <div class="field">
+                        <label for="login-email">Work email</label>
+                        <input id="login-email" name="email" type="email" autocomplete="email" required />
+                        <span class="error" id="login-email-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="login-password">Password</label>
+                        <div class="input-wrap">
+                            <input id="login-password" name="password" type="password" autocomplete="current-password"
+                                minlength="8" required />
+                            <button class="toggle-visibility" type="button" data-target="login-password">Show</button>
+                        </div>
+                        <span class="error" id="login-password-error"></span>
+                    </div>
+                    <div class="pill-row">
+                        <label class="checkbox">
+                            <input id="remember" type="checkbox" name="remember" />
+                            Keep me signed in for 14 days
+                        </label>
+                        <button class="secondary-btn" type="button" id="forgot-password-btn">Forgot password?</button>
+                    </div>
+                    <button class="primary-btn" type="submit">Sign in securely</button>
+                </form>
+                <div class="banner is-hidden" id="login-banner" aria-live="polite"></div>
+            </section>
+
+            <section class="panel" id="register-panel" role="tabpanel" aria-labelledby="register-tab">
+                <h2>Create your account</h2>
+                <p>Start with a secure profile. It takes less than a minute.</p>
+                <form id="register-form" novalidate>
+                    <div class="field">
+                        <label for="full-name">Full name</label>
+                        <input id="full-name" name="name" type="text" autocomplete="name" required />
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="register-email">Work email</label>
+                        <input id="register-email" name="email" type="email" autocomplete="email" required />
+                        <span class="error" id="register-email-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="company">Company name</label>
+                        <input id="company" name="company" type="text" autocomplete="organization" required />
+                        <span class="error" id="company-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="role">Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select a role</option>
+                            <option value="founder">Founder / Owner</option>
+                            <option value="it">IT / Security</option>
+                            <option value="ops">Operations</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error" id="role-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="register-password">Password</label>
+                        <div class="input-wrap">
+                            <input id="register-password" name="password" type="password" autocomplete="new-password"
+                                minlength="10" required />
+                            <button class="toggle-visibility" type="button"
+                                data-target="register-password">Show</button>
+                        </div>
+                        <div class="strength-meter" aria-live="polite">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strength-fill"></div>
+                            </div>
+                            <span class="helper" id="strength-label">Use 10+ characters, a number, and a symbol.</span>
+                        </div>
+                        <span class="error" id="register-password-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="confirm-password">Confirm password</label>
+                        <div class="input-wrap">
+                            <input id="confirm-password" name="confirm" type="password" autocomplete="new-password"
+                                minlength="10" required />
+                            <button class="toggle-visibility" type="button" data-target="confirm-password">Show</button>
+                        </div>
+                        <span class="error" id="confirm-password-error"></span>
+                    </div>
+                    <label class="checkbox">
+                        <input id="consent" type="checkbox" required />
+                        I agree to the Terms of Service and Privacy Policy.
+                    </label>
+                    <span class="error" id="consent-error"></span>
+                    <button class="primary-btn" type="submit">Create account</button>
+                </form>
+                <div class="banner" id="register-banner">All fields are required unless marked optional.</div>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="Index.js"></script>
+</body>
+
+</html>
