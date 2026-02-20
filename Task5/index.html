@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Navbar & Login</title>
+    <title>Responsive Navbar & Login + Admin</title>
     <link rel="stylesheet" href="Index.css">
 </head>
 
@@ -17,6 +17,7 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#" id="navLogin">Login</a>
+            <a href="#" id="navAdmin">Admin</a>
         </div>
     </nav>
 
@@ -134,7 +135,21 @@
         </section>
     </main>
 
-    <script src="Index.js"></script>
-</body>
+    <!-- admin dashboard panel -->
+    <section class="admin-dashboard" id="admin-dashboard" hidden>
+        <button id="closeAdmin" class="secondary-btn" type="button" style="float:right">Close</button>
+        <h2>Admin Dashboard</h2>
+        <div class="grid">
+
+
 
 </html>
+    <script src="Index.js"></script>
+</body>            <div class="card">User Management</div>
+            <div class="card">Reports</div>
+            <div class="card">Settings</div>
+            <div class="card">Logs</div>
+            <div class="card">Analytics</div>
+            <div class="card">Support</div>
+        </div>
+    </section>
