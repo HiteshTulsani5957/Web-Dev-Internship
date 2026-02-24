@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 7 - Notes CRUD App</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card" aria-labelledby="task-title">
+      <h1 id="task-title">Task 7: Notes CRUD App</h1>
+
+      <form id="noteForm" class="note-form" novalidate>
+        <div class="field">
+          <label for="noteTitle">Title</label>
+          <input id="noteTitle" name="title" type="text" required minlength="3" />
+          <span class="error" id="noteTitleError"></span>
+        </div>
+        <div class="field">
+          <label for="noteDesc">Description</label>
+          <textarea id="noteDesc" name="description" required></textarea>
+          <span class="error" id="noteDescError"></span>
+        </div>
+        <div class="controls">
+          <button type="submit" class="primary-btn">Add Note</button>
+          <button type="button" id="noteCancelBtn" class="secondary-btn" style="display:none">Cancel</button>
+        </div>
+      </form>
+
+      <div class="notes-container">
+        <div id="notesList"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
