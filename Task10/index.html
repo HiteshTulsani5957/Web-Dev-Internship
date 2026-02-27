@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader + Error Handling UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Data Loading Demo</h1>
+            <p>Real-world Loader & Error Handling Implementation</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Control Panel -->
+            <section class="control-panel">
+                <button class="btn btn-primary" id="fetchDataBtn">Fetch Data</button>
+                <button class="btn btn-secondary" id="fetchErrorBtn">Fetch Error (Demo)</button>
+                <button class="btn btn-secondary" id="clearBtn">Clear</button>
+                <select id="simulateSelect" class="select-input">
+                    <option value="success">Success Scenario</option>
+                    <option value="timeout">Timeout Error</option>
+                    <option value="network">Network Error</option>
+                    <option value="validation">Validation Error</option>
+                </select>
+            </section>
+
+            <!-- Loader Component -->
+            <div class="loader-container" id="loaderContainer" style="display: none;">
+                <div class="spinner-wrapper">
+                    <div class="spinner"></div>
+                    <p class="loader-text" id="loaderText">Loading data...</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="loader-percentage" id="loaderPercentage">0%</p>
+                </div>
+            </div>
+
+            <!-- Error Component -->
+            <div class="error-container" id="errorContainer" style="display: none;">
+                <div class="error-box">
+                    <div class="error-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <h2 class="error-title" id="errorTitle">Error</h2>
+                    <p class="error-message" id="errorMessage">Something went wrong</p>
+                    <p class="error-details" id="errorDetails"></p>
+                    <div class="error-actions">
+                        <button class="btn btn-danger" id="retryBtn">Retry</button>
+                        <button class="btn btn-secondary" id="dismissBtn">Dismiss</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Component -->
+            <div class="success-container" id="successContainer" style="display: none;">
+                <div class="success-box">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
+                    <h2 class="success-title">Success!</h2>
+                    <div class="data-display" id="dataDisplay"></div>
+                    <button class="btn btn-secondary" id="closeSuccessBtn">Close</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Loader + Error Handling UI | Web Development Task 10</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
