@@ -1,0 +1,52 @@
+.summary-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.summary-item,
+.summary-average {
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.summary-item:last-child,
+.summary-average {
+  margin-bottom: 0;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .summary-card {
+    padding: 15px;
+  }
+
+  .summary-item,
+  .summary-average {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .summary-value {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,119 @@
+.expense-form {
+  background: var(--card-bg);
+}
+
+.expense-form h2 {
+  margin-bottom: 25px;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.expense-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition);
+  background-color: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input.input-error,
+.form-group select.input-error {
+  border-color: var(--danger-color);
+  background-color: #fff5f5;
+}
+
+.error-message {
+  margin-top: 6px;
+  color: var(--danger-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  flex: 1;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: var(--text-primary);
+  flex: 0.8;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e0;
+}
+
+@media (max-width: 768px) {
+  .expense-form {
+    padding: 20px;
+  }
+
+  .expense-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn-secondary {
+    flex: 1;
+  }
+}

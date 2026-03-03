@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --success-color: #48bb78;
+  --danger-color: #f56565;
+  --warning-color: #ed8936;
+  --bg-color: #f7fafc;
+  --card-bg: #ffffff;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.app-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.form-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--shadow-lg);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.chart-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 40px;
+}
+
+.list-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-header p {
+    font-size: 1rem;
+  }
+
+  .app-main {
+    padding: 20px 15px;
+  }
+
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-section,
+  .chart-section,
+  .list-section {
+    padding: 20px;
+  }
+}

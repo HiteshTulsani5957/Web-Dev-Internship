@@ -1,0 +1,40 @@
+.expense-list h2 {
+  margin-bottom: 25px;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.expense-list.empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state {
+  color: var(--text-secondary);
+}
+
+.empty-state p:first-child {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.empty-state p:last-child {
+  font-size: 1rem;
+}
+
+.expense-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .expense-list h2 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .expense-items {
+    gap: 10px;
+  }
+}
