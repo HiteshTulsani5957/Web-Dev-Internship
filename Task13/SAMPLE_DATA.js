@@ -1,0 +1,80 @@
+export const PRODUCTS = [
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    price: 79.99,
+    originalPrice: 129.99,
+    category: "Electronics",
+    description: "Premium noise-cancelling wireless headphones with 30-hour battery life",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    rating: 4.5,
+    reviews: 128,
+    inStock: true,
+    discount: 38
+  },
+  {
+    id: 2,
+    name: "Smartwatch",
+    price: 199.99,
+    originalPrice: 299.99,
+    category: "Wearables",
+    description: "Advanced fitness tracking with heart rate monitor and GPS",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    rating: 4.7,
+    reviews: 245,
+    inStock: true,
+    discount: 33
+  },
+  {
+    id: 3,
+    name: "Vintage Camera",
+    price: 449.99,
+    originalPrice: 599.99,
+    category: "Photography",
+    description: "Classic film camera with manual focus and aperture control",
+    image: "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=400&fit=crop",
+    rating: 4.3,
+    reviews: 85,
+    inStock: true,
+    discount: 25
+  },
+  {
+    id: 4,
+    name: "Portable Speaker",
+    price: 49.99,
+    originalPrice: 99.99,
+    category: "Audio",
+    description: "Waterproof bluetooth speaker with 360-degree sound",
+    image: "https://images.unsplash.com/photo-1589010588155-ae9923707ffd?w=400&h=400&fit=crop",
+    rating: 4.6,
+    reviews: 312,
+    inStock: true,
+    discount: 50
+  },
+  {
+    id: 5,
+    name: "USB-C Hub",
+    price: 34.99,
+    originalPrice: 59.99,
+    category: "Accessories",
+    description: "7-in-1 USB-C hub with HDMI, USB 3.0, and SD card reader",
+    image: "https://images.unsplash.com/photo-1578674456671-eb1df38fb00e?w=400&h=400&fit=crop",
+    rating: 4.4,
+    reviews: 156,
+    inStock: true,
+    discount: 42
+  },
+  {
+    id: 6,
+    name: "Mechanical Keyboard",
+    price: 129.99,
+    originalPrice: 179.99,
+    category: "Electronics",
+    description: "RGB mechanical keyboard with hot-swappable switches",
+    image: "https://images.unsplash.com/photo-1587829191301-b5b19941f347?w=400&h=400&fit=crop",
+    rating: 4.8,
+    reviews: 421,
+    inStock: false,
+    discount: 28
+  }
+];
